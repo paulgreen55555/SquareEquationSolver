@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Web;
 
 /// <summary>
@@ -18,12 +19,22 @@ public class FormHandler : IHttpHandler
         string body = File.ReadAllText(basePath + "bodyForm.html");
         string result = "";
 
-        if (req.Params.Count > 0 && req.Params["aValue"] != null && req.Params["bValue"] != null && req.Params["cValue"] != null)
+        if (req.Params["aValue"] != null && req.Params["bValue"] != null && req.Params["cValue"] != null)
         {
+            string aVal = req.Params["aValue"];
+            string bVal = req.Params["bValue"];
+            string cVal = req.Params["cValue"];
 
-            result = Calculator.Calculate(req.Params["aValue"], req.Params["bValue"], req.Params["cValue"]);
+            if (aVal.Length > 0 && bVal.Length > 0 && cVal.Length > 0)
+            {
+                result = Calculator.Calculate(aVal, bVal, cVal);
+            }
+            else
+            {
+                result = "Please fill in all fiedls";
+            }
+           
         }
-
 
         string output = String.Format(body, result);
 

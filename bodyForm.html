@@ -1,22 +1,33 @@
 <html>
 <head>
     <!-- <link href="style.css" rel="stylesheet" type="text/css"/>-->
+    <style>
+        input{{ border-radius: 5px;}}
+        .main_block{{ padding: 0 10px;}}
+        .btn_block{{ margin-left: 125px }}
+        .block{{ padding:0 10px;}}
+        .elemet{{margin: 10px;}}
+        .title{{float: left; font-weight: bold; width: 15px;}}
+        .result{{ font-weight: bold; margin-left: 10px;}}                                                                         
+    </style>
 </head>
 <body>
 <form method="post">
-    <div class="">
+    <div class="main_block">
         <h2>Add values for equation: ax&sup2;+bx+c=0</h2>
         <div class="block">
             <div class="elemet">
-                <span>a:</span><input type="text" name="aValue">
+                <div class="title">a:</div><input type="text" name="aValue">
             </div>
             <div class="elemet">
-                <span>b:</span><input type="text" name="bValue">
+                <div class="title">b:</div><input type="text" name="bValue">
             </div>
             <div class="elemet">
-                <span>c:</span><input type="text" name="cValue">
+                <div class="title">c:</div><input type="text" name="cValue">
             </div>
-            <input type="submit" value="Calculate">
+            <div class="btn_block">
+                <input type="submit" value="Calculate">
+            </div>
         </div>
     </div>
 </form>
