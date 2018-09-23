@@ -18,8 +18,8 @@ public class Calculator
 
             double x1;
             double x2;
-            string bSign = B > 0 ? "+" : "-";
-            string cSign = C > 0 ? "+" : "-";
+            string bSign = B > 0 ? "+" : "";
+            string cSign = C > 0 ? "+" : "";
 
             if (D >= 0)
             {
