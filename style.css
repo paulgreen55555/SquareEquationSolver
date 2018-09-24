@@ -1,3 +1,8 @@
-﻿.block{}
+﻿input{border-radius: 5px;}
 
-.elemet{margin: 10px}
+.main_block{padding: 0 10px;}
+.btn_block{margin-left: 125px;}
+.block{padding:0 10px;}
+.elemet{margin: 10px;}
+.title{float: left; font-weight: bold; width: 15px;}
+.result{font-weight: bold; margin-left: 10px;}  

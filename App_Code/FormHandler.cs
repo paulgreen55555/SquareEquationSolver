@@ -4,9 +4,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Web;
 
-/// <summary>
-/// Summary description for FormHandler
-/// </summary>
+
 public class FormHandler : IHttpHandler
 {
     public void ProcessRequest(HttpContext context)
@@ -31,7 +29,7 @@ public class FormHandler : IHttpHandler
             }
             else
             {
-                result = "Please fill in all fiedls";
+                result = "Please fill in all fields";
             }
            
         }
